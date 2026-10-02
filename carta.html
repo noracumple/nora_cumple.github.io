@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#241322">
+  <meta name="description" content="Una pequeña sorpresa de cumpleaños hecha con cariño para Nora.">
+  <title>Una sorpresa para Nora ❤️</title>
+  <style>
+    :root {
+      --bg1: #170e18;
+      --bg2: #2a1426;
+      --bg3: #3a1c31;
+      --pink: #e8a9bb;
+      --pink-light: #f6dce4;
+      --cream: #fff6ee;
+      --champagne: #e8c99b;
+      --burgundy: #6d294b;
+      --soft: #d9c5d0;
+    }
+    * { box-sizing: border-box; }
+    html { min-height: 100%; background: var(--bg1); }
+    body {
+      margin: 0; min-height: 100vh; min-height: 100dvh;
+      padding: 16px; display: grid; place-items: center;
+      color: var(--cream); font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      background: radial-gradient(ellipse at 15% 15%, rgba(197,100,142,.16), transparent 42%),
+                  radial-gradient(ellipse at 90% 85%, rgba(218,183,126,.12), transparent 38%),
+                  linear-gradient(135deg, var(--bg1), var(--bg2) 50%, var(--bg3));
+      overflow-x: hidden;
+    }
+    #particles { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+    .shell {
+      width: min(100%, 820px); position: relative; z-index: 1;
+      border: 1px solid rgba(232,201,155,.35); border-radius: 28px;
+      background: rgba(34,17,31,.82); box-shadow: 0 25px 90px rgba(0,0,0,.28);
+      padding: clamp(20px, 5vw, 42px); overflow: hidden;
+      animation: appear .9s ease both;
+    }
+    .topbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .brand { margin: 0; color: var(--champagne); letter-spacing: .15em; font-size: .78rem; font-weight: 700; }
+    .mini-heart { color: var(--pink); font-size: 1.35rem; }
+    .date-pill {
+      margin: 22px auto 0; width: fit-content; max-width: 100%;
+      padding: 10px 17px; text-align: center; color: var(--champagne);
+      border: 1px solid rgba(232,201,155,.42); background: rgba(232,201,155,.07);
+      border-radius: 14px; font-size: .78rem; font-weight: 700; letter-spacing: .06em;
+      line-height: 1.55;
+    }
+    .hero { text-align: center; padding: 14px 0 22px; }
+    .hero-heart {
+      display: inline-block; color: var(--pink); font-size: clamp(3.5rem, 14vw, 5.3rem);
+      line-height: 1.2; text-shadow: 0 0 32px rgba(232,169,187,.25);
+      animation: heartbeat 1.8s ease-in-out infinite;
+    }
+    h1 {
+      margin: 8px 0 10px; font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 7vw, 3rem); line-height: 1.12; font-weight: 700;
+    }
+    .subtitle { color: var(--soft); line-height: 1.7; margin: 0 auto; max-width: 520px; font-size: clamp(.94rem, 3.4vw, 1.05rem); }
+    .letter {
+      max-width: 650px; margin: 0 auto; padding: clamp(20px, 5vw, 30px);
+      border: 1px solid rgba(232,201,155,.65); border-radius: 22px;
+      color: #4b3442; background: rgba(255,246,238,.97);
+      box-shadow: 0 12px 35px rgba(0,0,0,.12);
+      transform: translateY(12px); opacity: 0; max-height: 0; overflow: hidden;
+      padding-top: 0; padding-bottom: 0; border-color: transparent;
+      transition: opacity .7s ease, transform .7s ease, max-height .9s ease, padding .7s ease, margin .7s ease;
+    }
+    .letter.open {
+      opacity: 1; transform: translateY(0); max-height: 1000px;
+      padding-top: clamp(20px, 5vw, 30px); padding-bottom: clamp(20px, 5vw, 30px);
+      margin-top: 4px; margin-bottom: 20px; border-color: rgba(232,201,155,.65);
+    }
+    .eyebrow { color: #946278; letter-spacing: .16em; font-size: .68rem; font-weight: 800; text-align: center; }
+    .recipient { text-align: center; color: var(--burgundy); font: 700 clamp(2rem, 8vw, 2.5rem) Georgia, serif; margin: 9px 0 17px; }
+    .message {
+      white-space: pre-wrap; overflow-wrap: anywhere; text-align: center;
+      font-size: clamp(.98rem, 3.6vw, 1.04rem); line-height: 1.85;
+      padding: 15px clamp(8px, 3vw, 18px); border: 1px solid rgba(109,41,75,.12);
+      border-radius: 15px; background: rgba(255,255,255,.56); min-height: 80px;
+    }
+    .signature { color: #9a6379; text-align: center; font: italic 1.08rem Georgia, serif; margin: 17px 0 0; opacity: 0; transition: opacity .5s ease; }
+    .signature.visible { opacity: 1; }
+    .actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 11px; margin-top: 22px; }
+    button {
+      min-height: 48px; border: 0; border-radius: 15px; padding: 12px 20px;
+      font: 700 .95rem "Segoe UI", system-ui, sans-serif; cursor: pointer;
+      transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+    }
+    button:hover { transform: translateY(-2px); }
+    button:active { transform: translateY(0); }
+    .primary { color: #321827; background: var(--champagne); box-shadow: 0 7px 22px rgba(232,201,155,.13); }
+    .primary:hover { background: #f4ddb9; }
+    .secondary { color: var(--pink-light); background: rgba(232,169,187,.09); border: 1px solid rgba(232,169,187,.42); }
+    .footer { text-align: center; color: #a98b9d; font-size: .68rem; letter-spacing: .12em; margin: 23px 0 0; line-height: 1.6; }
+    .hidden { display: none !important; }
+    .burst { position: fixed; z-index: 5; pointer-events: none; animation: burst 2.8s ease-out forwards; font-size: 20px; }
+    @keyframes heartbeat { 0%,100% { transform: scale(1); } 9% { transform: scale(1.09); } 18% { transform: scale(1); } 27% { transform: scale(1.05); } 36% { transform: scale(1); } }
+    @keyframes appear { from { opacity: 0; transform: translateY(12px) scale(.99); } to { opacity: 1; transform: translateY(0) scale(1); } }
+    @keyframes burst { 0% { opacity: 1; transform: translateY(0) rotate(0) scale(.7); } 100% { opacity: 0; transform: translateY(100vh) rotate(520deg) scale(1.2); } }
+    @media (max-width: 480px) {
+      body { padding: 9px; align-items: start; }
+      .shell { border-radius: 22px; padding: 18px 15px 20px; margin: auto 0; }
+      .brand { font-size: .66rem; letter-spacing: .1em; }
+      .date-pill { margin-top: 17px; font-size: .7rem; }
+      .hero { padding: 10px 0 18px; }
+      .letter.open { margin-bottom: 15px; }
+      button { width: 100%; }
+      .actions { gap: 9px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <main class="shell">
+    <header class="topbar">
+      <p class="brand">♡ &nbsp; M O M E N T O S &nbsp; E S P E C I A L E S</p>
+      <span class="mini-heart" aria-hidden="true">♥</span>
+    </header>
+
+    <div class="date-pill" id="datePill">8 DE OCTUBRE</div>
+
+    <section class="hero">
+      <div class="hero-heart" aria-hidden="true">♡</div>
+      <h1 id="headline">He preparado algo<br>especial para ti…</h1>
+      <p class="subtitle" id="subtitle">Hay palabras que merecen un momento especial.</p>
+    </section>
+
+    <section class="letter" id="letter" aria-live="polite">
+      <div class="eyebrow">PARA ALGUIEN MUY ESPECIAL</div>
+      <h2 class="recipient">Nora</h2>
+      <div class="message" id="message"></div>
+      <p class="signature" id="signature">Con mucho cariño, para ti. ❤️</p>
+    </section>
+
+    <div class="actions">
+      <button class="primary" id="openButton">Abrir mi sorpresa ♥</button>
+      <button class="secondary hidden" id="replayButton">↻ Volver a leer</button>
+      <button class="secondary hidden" id="shareButton">Compartir 💌</button>
+    </div>
+    <p class="footer" id="footer">UNA PEQUEÑA SORPRESA HECHA CON CARIÑO<br>8 DE OCTUBRE</p>
+  </main>
+
+  <script>
+    // Personalización: puedes cambiar el nombre y el mensaje aquí.
+    const NOMBRE = "Nora Mokhtari";
+    const FECHA_CUMPLEANOS = { mes: 10, dia: 8 };
+    const TEXTO = `¡Feliz cumpleaños, ${NOMBRE}! ❤️
+
+Hoy quiero desearte toda la felicidad del mundo, porque eres una persona muy especial y mereces que la vida te regale cosas tan bonitas como tu sonrisa.
+
+Ojalá nunca te falten motivos para sonreír, personas que te quieran de verdad y sueños por cumplir. Que hoy y siempre seas muy feliz, preciosa. ❤️✨`;
+    const FIRMA = "Con mucho cariño, para ti. ❤️";
+
+    const $ = (id) => document.getElementById(id);
+    const now = new Date();
+    const birthdayThisYear = new Date(now.getFullYear(), FECHA_CUMPLEANOS.mes - 1, FECHA_CUMPLEANOS.dia);
+    const birthdayNext = birthdayThisYear < new Date(now.getFullYear(), now.getMonth(), now.getDate())
+      ? new Date(now.getFullYear() + 1, FECHA_CUMPLEANOS.mes - 1, FECHA_CUMPLEANOS.dia)
+      : birthdayThisYear;
+    const dias = Math.round((Date.UTC(birthdayNext.getFullYear(), birthdayNext.getMonth(), birthdayNext.getDate()) -
+      Date.UTC(now.getFullYear(), now.getMonth(), now.getDate())) / 86400000);
+    const fechaLarga = new Intl.DateTimeFormat("es-ES", {
+      day: "numeric", month: "long", year: "numeric"
+    }).format(birthdayThisYear).toUpperCase();
+    const esHoy = now.getMonth() + 1 === FECHA_CUMPLEANOS.mes && now.getDate() === FECHA_CUMPLEANOS.dia;
+    $("datePill").textContent = esHoy ? `HOY ES TU DÍA ESPECIAL · ${fechaLarga}` :
+      `8 DE OCTUBRE DE ${birthdayNext.getFullYear()} · FALTAN ${dias} ${dias === 1 ? "DÍA" : "DÍAS"}`;
+    $("footer").innerHTML = `HECHO CON CARIÑO · ${fechaLarga}`;
+
+    let typingTimer = null;
+    let index = 0;
+    function openLetter() {
+      $("letter").classList.add("open");
+      $("headline").textContent = "Un deseo para ti";
+      $("subtitle").textContent = `Para ${NOMBRE}, con todo mi cariño.`;
+      $("openButton").classList.add("hidden");
+      $("replayButton").classList.remove("hidden");
+      $("shareButton").classList.remove("hidden");
+      $("footer").textContent = `HECHO CON CARIÑO · ${fechaLarga}`;
+      startTyping();
+      launchConfetti(75);
+      setTimeout(() => $("letter").scrollIntoView({ behavior: "smooth", block: "nearest" }), 150);
+    }
+    function startTyping() {
+      clearInterval(typingTimer);
+      index = 0;
+      $("message").textContent = "";
+      $("signature").classList.remove("visible");
+      typingTimer = setInterval(() => {
+        if (index >= TEXTO.length) {
+          clearInterval(typingTimer);
+          $("signature").classList.add("visible");
+          launchConfetti(35);
+          return;
+        }
+        index = Math.min(index + (TEXTO[index] === "\n" ? 1 : 3), TEXTO.length);
+        $("message").textContent = TEXTO.slice(0, index);
+      }, 24);
+    }
+    $("openButton").addEventListener("click", openLetter);
+    $("replayButton").addEventListener("click", () => {
+      $("letter").scrollIntoView({ behavior: "smooth", block: "nearest" });
+      startTyping();
+      launchConfetti(25);
+    });
+    $("shareButton").addEventListener("click", async () => {
+      const shareData = { title: "Una sorpresa para Nora ❤️", text: "Te he preparado una pequeña sorpresa de cumpleaños ❤️", url: location.href };
+      if (navigator.share) {
+        try { await navigator.share(shareData); } catch (_) {}
+      } else if (navigator.clipboard) {
+        try {
+          await navigator.clipboard.writeText(location.href);
+          $("shareButton").textContent = "Enlace copiado ✓";
+          setTimeout(() => $("shareButton").textContent = "Compartir 💌", 2200);
+        } catch (_) { alert("Copia el enlace de la barra del navegador para compartirlo."); }
+      } else {
+        alert("Copia el enlace de la barra del navegador para compartirlo.");
+      }
+    });
+
+    // Partículas de fondo y confeti, sin imágenes ni bibliotecas externas.
+    const canvas = $("particles");
+    const ctx = canvas.getContext("2d");
+    let w = 0, h = 0, motes = [], confetti = [];
+    const colors = ["#E8A9BB", "#F6DCE4", "#E8C99B", "#FFFFFF", "#C77C9A"];
+    function resizeCanvas() {
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      w = window.innerWidth; h = window.innerHeight;
+      canvas.width = w * dpr; canvas.height = h * dpr;
+      canvas.style.width = w + "px"; canvas.style.height = h + "px";
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      motes = Array.from({ length: Math.min(65, Math.max(28, Math.floor(w / 18))) }, () => ({
+        x: Math.random() * w, y: Math.random() * h, r: Math.random() * 2 + .7,
+        speed: Math.random() * .45 + .15, drift: (Math.random() - .5) * .35,
+        alpha: Math.random() * .5 + .15, color: colors[Math.floor(Math.random() * colors.length)]
+      }));
+    }
+    function launchConfetti(count) {
+      for (let i = 0; i < count; i++) confetti.push({
+        x: Math.random() * w, y: -20 - Math.random() * h * .35,
+        vx: (Math.random() - .5) * 2.2, vy: Math.random() * 2 + 1.3,
+        size: Math.random() * 9 + 5, rot: Math.random() * 6,
+        vr: (Math.random() - .5) * .12, life: 1,
+        heart: Math.random() < .35, color: colors[Math.floor(Math.random() * colors.length)]
+      });
+    }
+    function drawHeart(x, y, size, color) {
+      ctx.save(); ctx.translate(x, y); ctx.scale(size / 20, size / 20);
+      ctx.beginPath(); ctx.moveTo(0, 7);
+      ctx.bezierCurveTo(-18, -3, -10, -13, 0, -5);
+      ctx.bezierCurveTo(10, -13, 18, -3, 0, 7);
+      ctx.fillStyle = color; ctx.fill(); ctx.restore();
+    }
+    function animate() {
+      ctx.clearRect(0, 0, w, h);
+      for (const p of motes) {
+        p.y += p.speed; p.x += p.drift;
+        if (p.y > h + 5) { p.y = -5; p.x = Math.random() * w; }
+        ctx.globalAlpha = p.alpha; ctx.fillStyle = p.color;
+        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fill();
+      }
+      ctx.globalAlpha = 1;
+      confetti = confetti.filter(p => p.life > 0 && p.y < h + 30);
+      for (const p of confetti) {
+        p.x += p.vx; p.y += p.vy; p.rot += p.vr; p.life -= .0035;
+        ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.rot); ctx.globalAlpha = Math.max(0, p.life);
+        if (p.heart) drawHeart(0, 0, p.size, p.color);
+        else { ctx.fillStyle = p.color; ctx.fillRect(-p.size / 2, -p.size / 2, p.size * .65, p.size * 1.3); }
+        ctx.restore();
+      }
+      ctx.globalAlpha = 1;
+      requestAnimationFrame(animate);
+    }
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas(); animate();
+  </script>
+</body>
+</html>
