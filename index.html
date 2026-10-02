@@ -2,10 +2,67 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO principal -->
+  <title>Regalo de cumpleaños para Nora | Una sorpresa especial</title>
+
+  <meta
+    name="description"
+    content="Nora, he preparado un regalo de cumpleaños especial para ti. Descubre esta sorpresa con una felicitación personalizada, una carta llena de cariño y mucho amor."
+  >
+
+  <meta name="author" content="Mourad Jadiani">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <meta name="language" content="Spanish">
   <meta name="theme-color" content="#241322">
-  <meta name="description" content="Una pequeña sorpresa de cumpleaños hecha con cariño para Nora.">
-  <title>Una sorpresa para Nora ❤️</title>
+  <meta name="color-scheme" content="dark">
+
+  <!-- URL oficial de esta página -->
+  <link rel="canonical" href="https://nora_cumple.github.io/">
+
+  <!-- Open Graph: vista previa al compartir el enlace -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Momentos Especiales">
+  <meta
+    property="og:title"
+    content="Nora, he preparado algo especial para ti ❤️"
+  >
+  <meta
+    property="og:description"
+    content="Este es tu regalo de cumpleaños, Nora. Una sorpresa personalizada, creada por Mourad Jadiani con mucho cariño."
+  >
+  <meta property="og:url" content="https://nora_cumple.github.io/">
+
+  <!-- Vista previa para X/Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta
+    name="twitter:title"
+    content="Un regalo especial para Nora ❤️"
+  >
+  <meta
+    name="twitter:description"
+    content="Nora, descubre tu regalo de cumpleaños: una sorpresa preparada especialmente para ti."
+  >
+
+  <!-- Datos estructurados -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Regalo de cumpleaños para Nora",
+    "description": "Una sorpresa de cumpleaños personalizada para Nora, creada por Mourad Jadiani.",
+    "url": "https://nora_cumple.github.io/",
+    "inLanguage": "es",
+    "author": {
+      "@type": "Person",
+      "name": "Mourad Jadiani"
+    }
+  }
+  </script>
+
   <style>
     :root {
       --bg1: #170e18;
@@ -18,115 +75,370 @@
       --burgundy: #6d294b;
       --soft: #d9c5d0;
     }
-    * { box-sizing: border-box; }
-    html { min-height: 100%; background: var(--bg1); }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      min-height: 100%;
+      background: var(--bg1);
+      scroll-behavior: smooth;
+    }
+
     body {
-      margin: 0; min-height: 100vh; min-height: 100dvh;
-      padding: 16px; display: grid; place-items: center;
-      color: var(--cream); font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
-      background: radial-gradient(ellipse at 15% 15%, rgba(197,100,142,.16), transparent 42%),
-                  radial-gradient(ellipse at 90% 85%, rgba(218,183,126,.12), transparent 38%),
-                  linear-gradient(135deg, var(--bg1), var(--bg2) 50%, var(--bg3));
+      margin: 0;
+      min-height: 100vh;
+      min-height: 100dvh;
+      padding: 16px;
+      display: grid;
+      place-items: center;
+      color: var(--cream);
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      background:
+        radial-gradient(ellipse at 15% 15%, rgba(197,100,142,.16), transparent 42%),
+        radial-gradient(ellipse at 90% 85%, rgba(218,183,126,.12), transparent 38%),
+        linear-gradient(135deg, var(--bg1), var(--bg2) 50%, var(--bg3));
       overflow-x: hidden;
     }
-    #particles { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+
+    #particles {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
     .shell {
-      width: min(100%, 820px); position: relative; z-index: 1;
-      border: 1px solid rgba(232,201,155,.35); border-radius: 28px;
-      background: rgba(34,17,31,.82); box-shadow: 0 25px 90px rgba(0,0,0,.28);
-      padding: clamp(20px, 5vw, 42px); overflow: hidden;
+      width: min(100%, 820px);
+      position: relative;
+      z-index: 1;
+      border: 1px solid rgba(232,201,155,.35);
+      border-radius: 28px;
+      background: rgba(34,17,31,.82);
+      box-shadow: 0 25px 90px rgba(0,0,0,.28);
+      padding: clamp(20px, 5vw, 42px);
+      overflow: hidden;
       animation: appear .9s ease both;
     }
-    .topbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-    .brand { margin: 0; color: var(--champagne); letter-spacing: .15em; font-size: .78rem; font-weight: 700; }
-    .mini-heart { color: var(--pink); font-size: 1.35rem; }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand {
+      margin: 0;
+      color: var(--champagne);
+      letter-spacing: .15em;
+      font-size: .78rem;
+      font-weight: 700;
+    }
+
+    .mini-heart {
+      color: var(--pink);
+      font-size: 1.35rem;
+    }
+
     .date-pill {
-      margin: 22px auto 0; width: fit-content; max-width: 100%;
-      padding: 10px 17px; text-align: center; color: var(--champagne);
-      border: 1px solid rgba(232,201,155,.42); background: rgba(232,201,155,.07);
-      border-radius: 14px; font-size: .78rem; font-weight: 700; letter-spacing: .06em;
+      margin: 22px auto 0;
+      width: fit-content;
+      max-width: 100%;
+      padding: 10px 17px;
+      text-align: center;
+      color: var(--champagne);
+      border: 1px solid rgba(232,201,155,.42);
+      background: rgba(232,201,155,.07);
+      border-radius: 14px;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .06em;
       line-height: 1.55;
     }
-    .hero { text-align: center; padding: 14px 0 22px; }
+
+    .hero {
+      text-align: center;
+      padding: 14px 0 22px;
+    }
+
     .hero-heart {
-      display: inline-block; color: var(--pink); font-size: clamp(3.5rem, 14vw, 5.3rem);
-      line-height: 1.2; text-shadow: 0 0 32px rgba(232,169,187,.25);
+      display: inline-block;
+      color: var(--pink);
+      font-size: clamp(3.5rem, 14vw, 5.3rem);
+      line-height: 1.2;
+      text-shadow: 0 0 32px rgba(232,169,187,.25);
       animation: heartbeat 1.8s ease-in-out infinite;
     }
+
     h1 {
-      margin: 8px 0 10px; font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(2rem, 7vw, 3rem); line-height: 1.12; font-weight: 700;
+      margin: 8px 0 10px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 7vw, 3rem);
+      line-height: 1.12;
+      font-weight: 700;
     }
-    .subtitle { color: var(--soft); line-height: 1.7; margin: 0 auto; max-width: 520px; font-size: clamp(.94rem, 3.4vw, 1.05rem); }
-    .screen { display: none; }
-    .screen.active { display: block; animation: screenIn .6s ease both; }
+
+    .subtitle {
+      color: var(--soft);
+      line-height: 1.7;
+      margin: 0 auto;
+      max-width: 520px;
+      font-size: clamp(.94rem, 3.4vw, 1.05rem);
+    }
+
+    .screen {
+      display: none;
+    }
+
+    .screen.active {
+      display: block;
+      animation: screenIn .6s ease both;
+    }
+
     .letter {
-      max-width: 650px; margin: 0 auto;
+      max-width: 650px;
+      margin: 0 auto;
       padding: clamp(20px, 5vw, 30px);
-      border: 1px solid rgba(232,201,155,.65); border-radius: 22px;
-      color: #4b3442; background: rgba(255,246,238,.97);
+      border: 1px solid rgba(232,201,155,.65);
+      border-radius: 22px;
+      color: #4b3442;
+      background: rgba(255,246,238,.97);
       box-shadow: 0 12px 35px rgba(0,0,0,.12);
     }
+
     .gift-note {
-      max-width: 620px; margin: 0 auto 18px; padding: 20px 18px;
-      text-align: center; line-height: 1.8; color: var(--pink-light);
+      max-width: 620px;
+      margin: 0 auto 18px;
+      padding: 20px 18px;
+      text-align: center;
+      line-height: 1.8;
+      color: var(--pink-light);
       background: rgba(232,169,187,.07);
-      border: 1px solid rgba(232,169,187,.24); border-radius: 18px;
+      border: 1px solid rgba(232,169,187,.24);
+      border-radius: 18px;
       font-size: clamp(.98rem, 3.5vw, 1.08rem);
     }
+
     .creator {
-      margin: 0 auto; text-align: center; color: var(--champagne);
-      font-size: .88rem; line-height: 1.7;
+      margin: 0 auto;
+      text-align: center;
+      color: var(--champagne);
+      font-size: .88rem;
+      line-height: 1.7;
     }
-    .creator strong { color: var(--pink-light); }
+
+    .creator strong {
+      color: var(--pink-light);
+    }
+
     @keyframes screenIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
-    .eyebrow { color: #946278; letter-spacing: .16em; font-size: .68rem; font-weight: 800; text-align: center; }
-    .recipient { text-align: center; color: var(--burgundy); font: 700 clamp(2rem, 8vw, 2.5rem) Georgia, serif; margin: 9px 0 17px; }
+
+    .eyebrow {
+      color: #946278;
+      letter-spacing: .16em;
+      font-size: .68rem;
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .recipient {
+      text-align: center;
+      color: var(--burgundy);
+      font: 700 clamp(2rem, 8vw, 2.5rem) Georgia, serif;
+      margin: 9px 0 17px;
+    }
+
     .message {
-      white-space: pre-wrap; overflow-wrap: anywhere; text-align: center;
-      font-size: clamp(.98rem, 3.6vw, 1.04rem); line-height: 1.85;
-      padding: 15px clamp(8px, 3vw, 18px); border: 1px solid rgba(109,41,75,.12);
-      border-radius: 15px; background: rgba(255,255,255,.56); min-height: 80px;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      text-align: center;
+      font-size: clamp(.98rem, 3.6vw, 1.04rem);
+      line-height: 1.85;
+      padding: 15px clamp(8px, 3vw, 18px);
+      border: 1px solid rgba(109,41,75,.12);
+      border-radius: 15px;
+      background: rgba(255,255,255,.56);
+      min-height: 80px;
     }
-    .signature { color: #9a6379; text-align: center; font: italic 1.08rem Georgia, serif; margin: 17px 0 0; opacity: 0; transition: opacity .5s ease; }
-    .signature.visible { opacity: 1; }
-    .actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 11px; margin-top: 22px; }
+
+    .signature {
+      color: #9a6379;
+      text-align: center;
+      font: italic 1.08rem Georgia, serif;
+      margin: 17px 0 0;
+      opacity: 0;
+      transition: opacity .5s ease;
+    }
+
+    .signature.visible {
+      opacity: 1;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 11px;
+      margin-top: 22px;
+    }
+
     button {
-      min-height: 48px; border: 0; border-radius: 15px; padding: 12px 20px;
-      font: 700 .95rem "Segoe UI", system-ui, sans-serif; cursor: pointer;
-      transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+      min-height: 48px;
+      border: 0;
+      border-radius: 15px;
+      padding: 12px 20px;
+      font: 700 .95rem "Segoe UI", system-ui, sans-serif;
+      cursor: pointer;
+      transition:
+        transform .2s ease,
+        background .2s ease,
+        box-shadow .2s ease;
     }
-    button:hover { transform: translateY(-2px); }
-    button:active { transform: translateY(0); }
-    .primary { color: #321827; background: var(--champagne); box-shadow: 0 7px 22px rgba(232,201,155,.13); }
-    .primary:hover { background: #f4ddb9; }
-    .secondary { color: var(--pink-light); background: rgba(232,169,187,.09); border: 1px solid rgba(232,169,187,.42); }
-    .footer { text-align: center; color: #a98b9d; font-size: .68rem; letter-spacing: .12em; margin: 23px 0 0; line-height: 1.6; }
-    .hidden { display: none !important; }
-    .burst { position: fixed; z-index: 5; pointer-events: none; animation: burst 2.8s ease-out forwards; font-size: 20px; }
-    @keyframes heartbeat { 0%,100% { transform: scale(1); } 9% { transform: scale(1.09); } 18% { transform: scale(1); } 27% { transform: scale(1.05); } 36% { transform: scale(1); } }
-    @keyframes appear { from { opacity: 0; transform: translateY(12px) scale(.99); } to { opacity: 1; transform: translateY(0) scale(1); } }
-    @keyframes burst { 0% { opacity: 1; transform: translateY(0) rotate(0) scale(.7); } 100% { opacity: 0; transform: translateY(100vh) rotate(520deg) scale(1.2); } }
+
+    button:hover {
+      transform: translateY(-2px);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+
+    button:focus-visible {
+      outline: 3px solid var(--pink-light);
+      outline-offset: 4px;
+    }
+
+    .primary {
+      color: #321827;
+      background: var(--champagne);
+      box-shadow: 0 7px 22px rgba(232,201,155,.13);
+    }
+
+    .primary:hover {
+      background: #f4ddb9;
+    }
+
+    .secondary {
+      color: var(--pink-light);
+      background: rgba(232,169,187,.09);
+      border: 1px solid rgba(232,169,187,.42);
+    }
+
+    .footer {
+      text-align: center;
+      color: #a98b9d;
+      font-size: .68rem;
+      letter-spacing: .12em;
+      margin: 23px 0 0;
+      line-height: 1.6;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      9% { transform: scale(1.09); }
+      18% { transform: scale(1); }
+      27% { transform: scale(1.05); }
+      36% { transform: scale(1); }
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(12px) scale(.99);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes burst {
+      0% {
+        opacity: 1;
+        transform: translateY(0) rotate(0) scale(.7);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(100vh) rotate(520deg) scale(1.2);
+      }
+    }
+
+    .burst {
+      position: fixed;
+      z-index: 5;
+      pointer-events: none;
+      animation: burst 2.8s ease-out forwards;
+      font-size: 20px;
+    }
+
     @media (max-width: 480px) {
-      body { padding: 9px; align-items: start; }
-      .shell { border-radius: 22px; padding: 18px 15px 20px; margin: auto 0; }
-      .brand { font-size: .66rem; letter-spacing: .1em; }
-      .date-pill { margin-top: 17px; font-size: .7rem; }
-      .hero { padding: 10px 0 18px; }
-      .letter.open { margin-bottom: 15px; }
-      button { width: 100%; }
-      .actions { gap: 9px; }
+      body {
+        padding: 9px;
+        align-items: start;
+      }
+
+      .shell {
+        border-radius: 22px;
+        padding: 18px 15px 20px;
+        margin: auto 0;
+      }
+
+      .brand {
+        font-size: .66rem;
+        letter-spacing: .1em;
+      }
+
+      .date-pill {
+        margin-top: 17px;
+        font-size: .7rem;
+      }
+
+      .hero {
+        padding: 10px 0 18px;
+      }
+
+      button {
+        width: 100%;
+      }
+
+      .actions {
+        gap: 9px;
+      }
     }
+
     @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+      }
     }
   </style>
 </head>
+
 <body>
   <canvas id="particles" aria-hidden="true"></canvas>
+
   <main class="shell">
     <header class="topbar">
       <p class="brand">♡ &nbsp; M O M E N T O S &nbsp; E S P E C I A L E S</p>
@@ -138,71 +450,144 @@
     <section class="screen active" id="introScreen">
       <section class="hero">
         <div class="hero-heart" aria-hidden="true">♡</div>
-        <h1 id="headline">Nora, he preparado algo<br>especial para ti…</h1>
-        <p class="subtitle" id="subtitle">Hay palabras que merecen un momento especial.</p>
+
+        <h1 id="headline">
+          Nora, he preparado algo especial para ti…
+        </h1>
+
+        <p class="subtitle" id="subtitle">
+          Hay palabras que merecen un momento especial.
+        </p>
       </section>
 
       <div class="gift-note">
         <strong>Este es tu regalo de cumpleaños, Nora. ❤️</strong><br>
         Una pequeña sorpresa creada especialmente para ti, con mucho cariño y con la ilusión de sacarte una sonrisa.
       </div>
-      <p class="creator">Hecho con cariño por<br><strong>Mourad Jadiani</strong> ♡</p>
+
+      <p class="creator">
+        Hecho con cariño por<br>
+        <strong>Mourad Jadiani</strong> ♡
+      </p>
 
       <div class="actions">
-        <a href="carta.html"><button class="primary" id="giftButton">Descubrir mi regalo ♥</button></a>
+        <button class="primary" id="giftButton" type="button">
+          Descubrir mi regalo ♥
+        </button>
       </div>
-      <p class="footer">UNA PEQUEÑA SORPRESA HECHA CON CARIÑO<br>8 DE OCTUBRE</p>
+
+      <p class="footer">
+        UNA PEQUEÑA SORPRESA HECHA CON CARIÑO<br>
+        8 DE OCTUBRE
+      </p>
     </section>
 
     <section class="screen" id="letterScreen">
       <section class="hero">
         <div class="hero-heart" aria-hidden="true">♡</div>
-        <h1>Un deseo para ti</h1>
-        <p class="subtitle">Para Nora, con todo mi cariño.</p>
+
+        <h2>Un deseo para ti</h2>
+
+        <p class="subtitle">
+          Para Nora, con todo mi cariño.
+        </p>
       </section>
 
-      <section class="letter" id="letter" aria-live="polite">
-        <div class="eyebrow">PARA ALGUIEN MUY ESPECIAL</div>
-        <h2 class="recipient">Nora</h2>
+      <article class="letter" id="letter" aria-live="polite">
+        <p class="eyebrow">PARA ALGUIEN MUY ESPECIAL</p>
+        <h3 class="recipient">Nora</h3>
+
         <div class="message" id="message"></div>
-        <p class="signature" id="signature">Con mucho cariño, para ti. ❤️</p>
-      </section>
+
+        <p class="signature" id="signature">
+          Con mucho cariño, para ti. ❤️
+        </p>
+      </article>
 
       <div class="actions">
-        <button class="primary" id="replayButton">↻ Volver a leer</button>
-        <button class="secondary" id="shareButton">Compartir 💌</button>
-        <button class="secondary" id="backButton">Volver al inicio</button>
+        <button class="primary" id="replayButton" type="button">
+          ↻ Volver a leer
+        </button>
+
+        <button class="secondary" id="shareButton" type="button">
+          Compartir 💌
+        </button>
+
+        <button class="secondary" id="backButton" type="button">
+          Volver al inicio
+        </button>
       </div>
-      <p class="footer">HECHO CON CARIÑO POR MOURAD JADIANI · 8 DE OCTUBRE</p>
+
+      <p class="footer">
+        HECHO CON CARIÑO POR MOURAD JADIANI · 8 DE OCTUBRE
+      </p>
     </section>
   </main>
 
   <script>
-    // Personalización: puedes cambiar el nombre y el mensaje aquí.
+    "use strict";
+
+    // Personalización de la felicitación.
     const NOMBRE = "Nora";
     const FECHA_CUMPLEANOS = { mes: 10, dia: 8 };
+
     const TEXTO = `¡Feliz cumpleaños, ${NOMBRE}! ❤️
 
 Hoy quiero desearte toda la felicidad del mundo, porque eres una persona muy especial y mereces que la vida te regale cosas tan bonitas como tu sonrisa.
 
 Ojalá nunca te falten motivos para sonreír, personas que te quieran de verdad y sueños por cumplir. Que hoy y siempre seas muy feliz, preciosa. ❤️✨`;
-    const FIRMA = "Con mucho cariño, para ti. ❤️";
 
     const $ = (id) => document.getElementById(id);
+
     const now = new Date();
-    const birthdayThisYear = new Date(now.getFullYear(), FECHA_CUMPLEANOS.mes - 1, FECHA_CUMPLEANOS.dia);
-    const birthdayNext = birthdayThisYear < new Date(now.getFullYear(), now.getMonth(), now.getDate())
-      ? new Date(now.getFullYear() + 1, FECHA_CUMPLEANOS.mes - 1, FECHA_CUMPLEANOS.dia)
-      : birthdayThisYear;
-    const dias = Math.round((Date.UTC(birthdayNext.getFullYear(), birthdayNext.getMonth(), birthdayNext.getDate()) -
-      Date.UTC(now.getFullYear(), now.getMonth(), now.getDate())) / 86400000);
+
+    const birthdayThisYear = new Date(
+      now.getFullYear(),
+      FECHA_CUMPLEANOS.mes - 1,
+      FECHA_CUMPLEANOS.dia
+    );
+
+    const birthdayNext =
+      birthdayThisYear < new Date(
+        now.getFullYear(),
+        now.getMonth(),
+        now.getDate()
+      )
+        ? new Date(
+            now.getFullYear() + 1,
+            FECHA_CUMPLEANOS.mes - 1,
+            FECHA_CUMPLEANOS.dia
+          )
+        : birthdayThisYear;
+
+    const dias = Math.round(
+      (
+        Date.UTC(
+          birthdayNext.getFullYear(),
+          birthdayNext.getMonth(),
+          birthdayNext.getDate()
+        ) -
+        Date.UTC(
+          now.getFullYear(),
+          now.getMonth(),
+          now.getDate()
+        )
+      ) / 86400000
+    );
+
     const fechaLarga = new Intl.DateTimeFormat("es-ES", {
-      day: "numeric", month: "long", year: "numeric"
+      day: "numeric",
+      month: "long",
+      year: "numeric"
     }).format(birthdayNext).toUpperCase();
-    const esHoy = now.getMonth() + 1 === FECHA_CUMPLEANOS.mes && now.getDate() === FECHA_CUMPLEANOS.dia;
-    $("datePill").textContent = esHoy ? `HOY ES TU DÍA ESPECIAL · ${fechaLarga}` :
-      `8 DE OCTUBRE DE ${birthdayNext.getFullYear()} · FALTAN ${dias} ${dias === 1 ? "DÍA" : "DÍAS"}`;
-    $("footer").innerHTML = `HECHO CON CARIÑO · ${fechaLarga}`;
+
+    const esHoy =
+      now.getMonth() + 1 === FECHA_CUMPLEANOS.mes &&
+      now.getDate() === FECHA_CUMPLEANOS.dia;
+
+    $("datePill").textContent = esHoy
+      ? `HOY ES TU DÍA ESPECIAL · ${fechaLarga}`
+      : `8 DE OCTUBRE DE ${birthdayNext.getFullYear()} · FALTAN ${dias} ${dias === 1 ? "DÍA" : "DÍAS"}`;
 
     let typingTimer = null;
     let index = 0;
@@ -210,23 +595,39 @@ Ojalá nunca te falten motivos para sonreír, personas que te quieran de verdad 
     function openLetter() {
       $("introScreen").classList.remove("active");
       $("letterScreen").classList.add("active");
+
+      document.title = "Una carta de cumpleaños para Nora ❤️";
+
       startTyping();
       launchConfetti(85);
-      window.scrollTo({ top: 0, behavior: "smooth" });
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
     }
 
     function returnToIntro() {
       clearInterval(typingTimer);
+
       $("letterScreen").classList.remove("active");
       $("introScreen").classList.add("active");
-      window.scrollTo({ top: 0, behavior: "smooth" });
+
+      document.title = "Regalo de cumpleaños para Nora | Una sorpresa especial";
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
     }
 
     function startTyping() {
       clearInterval(typingTimer);
+
       index = 0;
       $("message").textContent = "";
       $("signature").classList.remove("visible");
+
       typingTimer = setInterval(() => {
         if (index >= TEXTO.length) {
           clearInterval(typingTimer);
@@ -234,88 +635,200 @@ Ojalá nunca te falten motivos para sonreír, personas que te quieran de verdad 
           launchConfetti(35);
           return;
         }
-        index = Math.min(index + (TEXTO[index] === "\\n" ? 1 : 3), TEXTO.length);
+
+        index = Math.min(
+          index + (TEXTO[index] === "\n" ? 1 : 3),
+          TEXTO.length
+        );
+
         $("message").textContent = TEXTO.slice(0, index);
       }, 24);
     }
 
     $("giftButton").addEventListener("click", openLetter);
+
     $("replayButton").addEventListener("click", () => {
-      $("letter").scrollIntoView({ behavior: "smooth", block: "nearest" });
+      $("letter").scrollIntoView({
+        behavior: "smooth",
+        block: "nearest"
+      });
+
       startTyping();
       launchConfetti(25);
     });
+
     $("backButton").addEventListener("click", returnToIntro);
+
     $("shareButton").addEventListener("click", async () => {
-      const shareData = { title: "Una sorpresa para Nora ❤️", text: "Nora, te he preparado este regalo con cariño. ❤️", url: location.href };
+      const shareData = {
+        title: "Un regalo especial para Nora ❤️",
+        text: "Nora, te he preparado este regalo de cumpleaños con mucho cariño. ❤️",
+        url: "https://nora_cumple.github.io/"
+      };
+
       if (navigator.share) {
-        try { await navigator.share(shareData); } catch (_) {}
+        try {
+          await navigator.share(shareData);
+        } catch (error) {
+          // El usuario puede cancelar el menú de compartir.
+        }
       } else if (navigator.clipboard) {
         try {
-          await navigator.clipboard.writeText(location.href);
+          await navigator.clipboard.writeText(shareData.url);
+
           $("shareButton").textContent = "Enlace copiado ✓";
-          setTimeout(() => $("shareButton").textContent = "Compartir 💌", 2200);
-        } catch (_) { alert("Copia el enlace de la barra del navegador para compartirlo."); }
+
+          setTimeout(() => {
+            $("shareButton").textContent = "Compartir 💌";
+          }, 2200);
+        } catch (error) {
+          window.prompt("Copia este enlace para compartir tu regalo:", shareData.url);
+        }
       } else {
-        alert("Copia el enlace de la barra del navegador para compartirlo.");
+        window.prompt("Copia este enlace para compartir tu regalo:", shareData.url);
       }
     });
 
-    // Partículas de fondo y confeti, sin imágenes ni bibliotecas externas.
+    // Partículas de fondo y confeti.
     const canvas = $("particles");
     const ctx = canvas.getContext("2d");
-    let w = 0, h = 0, motes = [], confetti = [];
-    const colors = ["#E8A9BB", "#F6DCE4", "#E8C99B", "#FFFFFF", "#C77C9A"];
+
+    let w = 0;
+    let h = 0;
+    let motes = [];
+    let confetti = [];
+
+    const colors = [
+      "#E8A9BB",
+      "#F6DCE4",
+      "#E8C99B",
+      "#FFFFFF",
+      "#C77C9A"
+    ];
+
     function resizeCanvas() {
       const dpr = Math.min(window.devicePixelRatio || 1, 2);
-      w = window.innerWidth; h = window.innerHeight;
-      canvas.width = w * dpr; canvas.height = h * dpr;
-      canvas.style.width = w + "px"; canvas.style.height = h + "px";
+
+      w = window.innerWidth;
+      h = window.innerHeight;
+
+      canvas.width = w * dpr;
+      canvas.height = h * dpr;
+      canvas.style.width = w + "px";
+      canvas.style.height = h + "px";
+
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      motes = Array.from({ length: Math.min(65, Math.max(28, Math.floor(w / 18))) }, () => ({
-        x: Math.random() * w, y: Math.random() * h, r: Math.random() * 2 + .7,
-        speed: Math.random() * .45 + .15, drift: (Math.random() - .5) * .35,
-        alpha: Math.random() * .5 + .15, color: colors[Math.floor(Math.random() * colors.length)]
-      }));
+
+      motes = Array.from(
+        {
+          length: Math.min(
+            65,
+            Math.max(28, Math.floor(w / 18))
+          )
+        },
+        () => ({
+          x: Math.random() * w,
+          y: Math.random() * h,
+          r: Math.random() * 2 + .7,
+          speed: Math.random() * .45 + .15,
+          drift: (Math.random() - .5) * .35,
+          alpha: Math.random() * .5 + .15,
+          color: colors[Math.floor(Math.random() * colors.length)]
+        })
+      );
     }
+
     function launchConfetti(count) {
-      for (let i = 0; i < count; i++) confetti.push({
-        x: Math.random() * w, y: -20 - Math.random() * h * .35,
-        vx: (Math.random() - .5) * 2.2, vy: Math.random() * 2 + 1.3,
-        size: Math.random() * 9 + 5, rot: Math.random() * 6,
-        vr: (Math.random() - .5) * .12, life: 1,
-        heart: Math.random() < .35, color: colors[Math.floor(Math.random() * colors.length)]
-      });
+      for (let i = 0; i < count; i++) {
+        confetti.push({
+          x: Math.random() * w,
+          y: -20 - Math.random() * h * .35,
+          vx: (Math.random() - .5) * 2.2,
+          vy: Math.random() * 2 + 1.3,
+          size: Math.random() * 9 + 5,
+          rot: Math.random() * 6,
+          vr: (Math.random() - .5) * .12,
+          life: 1,
+          heart: Math.random() < .35,
+          color: colors[Math.floor(Math.random() * colors.length)]
+        });
+      }
     }
+
     function drawHeart(x, y, size, color) {
-      ctx.save(); ctx.translate(x, y); ctx.scale(size / 20, size / 20);
-      ctx.beginPath(); ctx.moveTo(0, 7);
+      ctx.save();
+      ctx.translate(x, y);
+      ctx.scale(size / 20, size / 20);
+
+      ctx.beginPath();
+      ctx.moveTo(0, 7);
       ctx.bezierCurveTo(-18, -3, -10, -13, 0, -5);
       ctx.bezierCurveTo(10, -13, 18, -3, 0, 7);
-      ctx.fillStyle = color; ctx.fill(); ctx.restore();
+
+      ctx.fillStyle = color;
+      ctx.fill();
+      ctx.restore();
     }
+
     function animate() {
       ctx.clearRect(0, 0, w, h);
+
       for (const p of motes) {
-        p.y += p.speed; p.x += p.drift;
-        if (p.y > h + 5) { p.y = -5; p.x = Math.random() * w; }
-        ctx.globalAlpha = p.alpha; ctx.fillStyle = p.color;
-        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fill();
+        p.y += p.speed;
+        p.x += p.drift;
+
+        if (p.y > h + 5) {
+          p.y = -5;
+          p.x = Math.random() * w;
+        }
+
+        ctx.globalAlpha = p.alpha;
+        ctx.fillStyle = p.color;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fill();
       }
+
       ctx.globalAlpha = 1;
-      confetti = confetti.filter(p => p.life > 0 && p.y < h + 30);
+
+      confetti = confetti.filter(
+        p => p.life > 0 && p.y < h + 30
+      );
+
       for (const p of confetti) {
-        p.x += p.vx; p.y += p.vy; p.rot += p.vr; p.life -= .0035;
-        ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.rot); ctx.globalAlpha = Math.max(0, p.life);
-        if (p.heart) drawHeart(0, 0, p.size, p.color);
-        else { ctx.fillStyle = p.color; ctx.fillRect(-p.size / 2, -p.size / 2, p.size * .65, p.size * 1.3); }
+        p.x += p.vx;
+        p.y += p.vy;
+        p.rot += p.vr;
+        p.life -= .0035;
+
+        ctx.save();
+        ctx.translate(p.x, p.y);
+        ctx.rotate(p.rot);
+        ctx.globalAlpha = Math.max(0, p.life);
+
+        if (p.heart) {
+          drawHeart(0, 0, p.size, p.color);
+        } else {
+          ctx.fillStyle = p.color;
+          ctx.fillRect(
+            -p.size / 2,
+            -p.size / 2,
+            p.size * .65,
+            p.size * 1.3
+          );
+        }
+
         ctx.restore();
       }
+
       ctx.globalAlpha = 1;
       requestAnimationFrame(animate);
     }
+
     window.addEventListener("resize", resizeCanvas);
-    resizeCanvas(); animate();
+
+    resizeCanvas();
+    animate();
   </script>
 </body>
 </html>
